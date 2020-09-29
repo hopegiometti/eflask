@@ -17,7 +17,7 @@ CORS(app)
 
 @app.route('/')
 
-def home():
+def home_view():
     allspellnames = []
 
     for spell in spells:
