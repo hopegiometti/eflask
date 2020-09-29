@@ -10,7 +10,7 @@ app = Flask(__name__)
 # def home_view(): 
 #     return "<h1>Welcome to Geeks for Geeks</h1>"
 
-spells = json.load(open("files/spells.json"))
+spells = json.load(open("spells.json"))
 
 app=Flask(__name__)
 CORS(app)
