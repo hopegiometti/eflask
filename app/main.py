@@ -2,6 +2,7 @@ from flask import Flask
 from flask import jsonify 
 import json
 from flask_cors import CORS
+import os
 # from flask_sqlalchemy import SQLAlchemy
   
 app = Flask(__name__) 
@@ -31,7 +32,13 @@ def home_view():
 
 if __name__ == "__main__":
     app.run(debug=True)
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host="0.0.0.0", port=port)
 
 
 #to run a flask app
 #flask run 
+
+# if __name__ == "__main__":
+    # port = int(os.environ.get("PORT", 5000))
+    # app.run(host="0.0.0.0", port=port)
